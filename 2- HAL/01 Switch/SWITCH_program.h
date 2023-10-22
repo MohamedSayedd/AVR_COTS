@@ -4,32 +4,14 @@
 /******************     Layer: HAL               ************************/
 /******************     SWC: SWITCH                  ************************/
 /******************     Version:1.00              ************************/
-/******************     Date:20-10-2023            ************************/
+/******************     Date:22-10-2023            ************************/
 /*************************************************************************/
 /*************************************************************************/
 
+#ifndef SWITCH_H_
+#define SWITCH_H_
+void SWITCH_VoidInit(u8 Copy_u8SwitchPort,u8 Copy_u8SwitchPin);
 
-#ifndef SWITCH_INTERFACE_H_
-#define SWITCH_INTERFACE_H_
+u8 Switch_u8GetSwitchStatus(u8 Copy_u8SwitchPort,u8 Copy_u8SwitchPin);
 
-
-typedef struct{
-
-	u8	Copy_u8PORT;
-	u8	Copy_u8PIN;
-	u8	Copy_u8PULL_TYPE;
-
-
-}SWITCH_T;
-
-
-#define PRESSED	0
-#define NOTPRESSED 1
-
-#define PULLUP			0
-#define PULLDOWN		1
-
-u8 SWITCH_u8GetState(SWITCH_T * Copy_psSwitch);
-
-
-#endif
+#endif /* SWITCH_H_ */
